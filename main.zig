@@ -191,8 +191,6 @@ fn isGameOver() !bool {
     return gameover;
 }
 
-fn gameInit() !void {}
-
 pub fn main() !void {
     var oldt: c.termios = undefined;
     var newt: c.termios = undefined;
@@ -257,7 +255,7 @@ pub fn main() !void {
 
 test "toMerge" {
     const eql = std.mem.eql;
-    const expect = std.testinexpect;
+    const expect = std.testing.expect;
 
     var arr: [4]u32 = undefined;
 
@@ -292,7 +290,7 @@ test "toMerge" {
 
 test "toLeft" {
     const eql = std.mem.eql;
-    const expect = std.testinexpect;
+    const expect = std.testing.expect;
 
     var arr: [4]u32 = undefined;
 
